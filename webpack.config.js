@@ -1,4 +1,5 @@
 var webpack = require('webpack');
+var path = require('path');
 
 module.exports = {
 	entry: [
@@ -32,6 +33,11 @@ module.exports = {
 			Controls: 'app/components/Controls.jsx'
 		},
 		extensions: ['', '.js', '.jsx']
+	},
+	sassLoader: {
+		includePaths: [
+			path.resolve(__dirname, './node_modules/foundation-sites/scss')
+		]
 	},
 	module: {
 		loaders: [
